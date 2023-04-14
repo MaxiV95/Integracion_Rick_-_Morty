@@ -1,0 +1,13 @@
+.nav {
+  
+  z-index: 2;
+  position: fixed;
+  width: calc(100vw - 10vw);
+  background-color: rgba(0, 0, 255, 0.726);
+  padding: 10px;
+  border-radius: 1rem;
+
+  box-shadow: 0 0 10px #002aff,
+                0 0 15px #0073ff,
+                0 0 20px #00b7ff;
+}

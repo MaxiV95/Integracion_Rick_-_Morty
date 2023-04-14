@@ -1,0 +1,17 @@
+.contentFav{
+  display: flex;
+}
+
+.fav {
+  z-index: 3;
+  position: fixed;
+  width: 13rem;
+  top: 1.6rem;
+  right: calc(100vw - 90vw);
+  padding: 10px;
+  text-align: right;
+}
+
+.fav select{
+  margin: .2rem;
+}

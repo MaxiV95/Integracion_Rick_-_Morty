@@ -1,0 +1,140 @@
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  display: block;
+  
+  position: relative;
+  top: -.1rem;
+}
+
+.content{
+  position: relative;
+  margin: .5em;
+}
+
+.card {
+  /* display: flex; */
+  position: relative;
+  border: #38a3a5 solid;
+  box-shadow: .5rem .5rem rgba(0, 0, 0, .25);
+  background-color: #80ed99a0 ;
+  height: calc(100vw - 74vw);
+  width: calc(100vw - 80vw);
+  transition: all 0.4s ease;
+  border-radius: .5rem;
+  text-decoration: none;
+}
+
+.card:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+  box-shadow: 0;
+
+  top: -0px;
+  left: -0px;
+  bottom: -0px;
+  right: -0px;
+  z-index: -0;
+  animation: neon-border 2s ease-in-out infinite;
+}
+
+@keyframes neon-border {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 15px #ff0000,
+                0 0 20px #ea00ff,
+                0 0 30px #9000ff;
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 0 5px #6200ff,
+                0 0 10px #005eff,
+                0 0 15px #0095ff,
+                0 0 20px #00f7ff,
+                0 0 30px #00ff7b,
+                0 0 40px #95ff00;
+  }
+  100% {
+    
+    box-shadow: 0 0 15px #aaff00,
+                0 0 20px #ffb300,
+                0 0 30px #ff0000;
+  }
+}
+
+.card img {
+  position: absolute;
+  top: calc(100vw - 88.5vw);
+  height: calc(100vw - 86.5vw);
+  width: calc(100vw - 80vw);
+  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+  transition: all 0.4s ease;
+}
+
+.card img:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+}
+
+.card h4{
+  font-size:calc(100vw - 97.5vw);
+  color: #854ec0;
+}
+
+.card h5{
+  font-size:calc(100vw - 98vw);
+}
+
+.card h5, h4 {
+  text-decoration: none;
+  margin: .3rem;
+  color: #22577a;
+  transition: all 0.4s ease;
+}
+
+.card h5:hover {
+  color: #ffc300;
+}
+
+.btnH {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  position: absolute;
+  top: calc(100vw - 99.3vw);
+  right: .4rem;
+  z-index: 1; /* Asegura que el botón esté por encima del contenedor 'a' */
+  background-color: #ad30c3;
+  color: #fcebfc;
+  font-weight: bold; /* Letra en negrita */
+  border: transparent;
+  font-size: calc(100vw - 97.5vw); /* Tamaño letra, 1rem ~ 16px*/
+  cursor: pointer; /* Cambia el puntero cursor mause */
+  border-radius: 0.3rem;
+  transition: 1.5s;
+}
+
+.btnH:hover { /* Cuando el cursor está dentro */
+  background-color: #5e60ce;
+  border-radius: 2rem;
+  color: #ff0019;
+}
+
+.btnL {
+  position: absolute;
+  top: calc(100vw - 77.5vw);
+  right: .3rem;
+  z-index: 1; /* Asegura que el botón esté por encima del contenedor 'a' */
+  background-color: #722ee6;
+  color: #ffc6ff;
+  font-weight: bold; /* Letra en negrita */
+  border: transparent;
+  font-size: calc(100vw - 97.5vw); /* Tamaño letra, 1rem ~ 16px*/
+  cursor: pointer; /* Cambia el puntero cursor mause */
+  border-radius: 0.3rem;
+  transition: 1.5s;
+}
+
+.btnL:hover { /* Cuando el cursor está dentro */
+  background-color: #5e60ce;
+  border-radius: 2rem;
+  color: #ff00c3;
+}
