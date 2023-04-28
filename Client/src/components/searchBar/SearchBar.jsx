@@ -20,7 +20,7 @@ export default function SearchBar({onSearch}) {
       <div>
          <input type='search' onChange={handleChange} value={id}/>
          <button onClick={()=>{onSearch(id);setId('')}}>Agregar</button>
-         <button onClick={()=>{onSearch(getRandomNumber())}}>Aleatorio</button>
+         <button onClick={()=>{onSearch(getRandomNumber().toString())}}>Aleatorio</button>
       </div>
    );
 }

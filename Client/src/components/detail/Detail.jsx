@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { URL_BASE, API_KEY } from "../zAux/key";
 import style from './Detail.module.css'
 
 export default function Detail() {
@@ -10,7 +9,7 @@ export default function Detail() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios(`${URL_BASE}/${id}?key=${API_KEY}`)
+    axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then((response) => response.data)
       .then((data) => {
         setIsLoading(false); // Se indica que se ha terminado de cargar
@@ -20,13 +19,7 @@ export default function Detail() {
           window.alert("No hay personajes con ese ID");
         }
       })
-      .catch((error) => {
-        console.log(error);
-        window.alert("Se ha producido un error en la solicitud de la API");
-      });
-    return () => {
-      setCharacter({}); //Al desmontar el componente
-    };
+    return setCharacter({}); //Al desmontar el componente
   }, [id]);
 
   return (

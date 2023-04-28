@@ -4,19 +4,19 @@ import { addFav, removeFav } from "../../redux/actions";
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
-const Card = ({id,name,species,gender,image,status,origin,onClose,addFav,removeFav,allCharactersFav}) => {
+const Card = ({id,name,species,gender,image,origin,onClose,addFav,removeFav,myFavorites}) => {
   
   const home = useLocation().pathname ==='/home'; // Chequea que estemos en el login
 
   const [isFav, setIsFav] = useState(false); // Favorito
 
   useEffect(() => {
-    allCharactersFav.forEach((fav) => {
+    myFavorites.forEach((fav) => {
       if (fav.id === id) {
         setIsFav(true);
       }
     });
-  }, [allCharactersFav, id]);
+  }, [myFavorites, id]);
 
   const handleFavorite = () => {
     if (isFav) {
@@ -51,8 +51,7 @@ const Card = ({id,name,species,gender,image,status,origin,onClose,addFav,removeF
 
 const mapStateToProps = (state) => {
   return {
-    allCharactersFav: state.allCharactersFav,
-    allCharacters: state.allCharacters,
+    myFavorites: state.myFavorites
   };
 };
 
