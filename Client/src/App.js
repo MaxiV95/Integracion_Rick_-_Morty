@@ -1,9 +1,11 @@
 // npm install
 // npx create-react-app demo-nombre
 // npm i redux@4.0.5 react-redux redux-thunk react-router-dom@6.3.0 axios
-// npm install --save react-copy-to-clipboard
+// npm install react-copy-to-clipboard
 
 // npm i -D jest //para test
+
+// npm i express morgan nodemon sequelize pg pg-hstore dotenv//BD
 
 // npm install less less-watch-compiler
 // npm run less

@@ -1,6 +1,7 @@
 import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, TODOS } from "./action-types";
 
 const initialState = {
+  idUser: 0,
   myFavorites: [],
   allCharactersFav: [],
 };
